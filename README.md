@@ -1,1 +1,1 @@
-# eatly-multy-pages
+# eatly-multy-pages - многостраничный сайт ресторана
