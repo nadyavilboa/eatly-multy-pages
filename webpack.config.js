@@ -46,6 +46,7 @@ module.exports = {
             patterns: [
                 { from: 'src/assets/img', to: 'img' },
                 { from: 'src/index.html' },
+                { from: 'src/assets/sprite.svg' }
             ]
         }),
     ],
