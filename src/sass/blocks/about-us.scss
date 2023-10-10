@@ -1,0 +1,49 @@
+.about-us {
+    background: 
+        url(../assets/img/bg-1.png) no-repeat,
+        url(../assets/img/bg-2.png) no-repeat bottom right, 
+        $violet;
+    padding: 99px 36px 82px 45px;
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        padding: 60px 0;
+        border-bottom: 1px solid $about-us-line;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__item:first-child {
+        padding-top: 0;
+    }
+
+    &__item:last-child {
+        padding-bottom: 0;
+        border-bottom: 1px solid transparent;
+    }
+
+    &__number {
+        color: $white;
+        text-align: center;
+        font-family: $public;
+        font-size: 43.2px;
+        font-weight: 700;
+        line-height: 125%;
+        margin-bottom: 11px;
+    }
+
+    &__text {
+        color: $light-grey-text;
+        text-align: center;
+        font-family: $inter;
+        font-size: 14.4px;
+        font-weight: 500;
+        line-height: 150%;
+    }
+}

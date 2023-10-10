@@ -1,4 +1,5 @@
 .btn {
+    border: none;
     border-radius: 10px;
     text-decoration: none;
     display: flex;
@@ -16,5 +17,9 @@
     &-violet {
         background: $violet-btn;
         color: $white;
+
+        svg {
+            fill: $white;
+        }
     }
 }
