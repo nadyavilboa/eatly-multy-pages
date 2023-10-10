@@ -1,0 +1,83 @@
+.graphics {
+    position: relative;
+
+    &__rest {
+        width: 156px;
+        height: 42px;
+        border-radius: 8px;
+        filter: drop-shadow(6px -8px 13px $box-shadow);
+        background: $white;
+        padding: 2px 8px;
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: -30px;
+        z-index: 5;
+    }
+
+    &__rest-img {
+        margin-right: 8px;
+    }
+
+    &__rest-info {
+        color: $graph;
+        display: flex;
+        flex-direction: column;
+        font-family: $poppins;
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    &__rest-name {
+        font-size: 7.398px;
+        font-weight: 600;
+        line-height: 140%;
+        margin-bottom: 2px;
+    }
+
+    &__rest-text {
+        font-size: 4.673px;
+        font-weight: 500;
+        line-height: 140%; 
+    }
+
+    &__rest-time {
+        position: absolute;
+        bottom: 5px;
+        right: 8px;
+        color: $grey-time;
+        font-size: 5.062px;
+        font-weight: 500;
+        line-height: 140%;
+    }
+
+    &__ring-img-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        &::before {
+            content: '';
+            width: 202px;
+            height: 202px;
+            display: block;
+            position: absolute;
+            left: calc(50% - 90px);
+            top: -5px;
+            z-index: -1;
+            background: linear-gradient(137deg, $violet-btn 4.83%, $dark-violet 98.22%);
+            border-radius: 50%;
+        }
+    }
+
+    &__graph {
+        width: 98px;
+        height: 98px;
+        filter: drop-shadow(6px -8px 13px $box-shadow);
+        border-radius: 8px;
+        background: $white;
+        padding: 6px 0;
+        position: absolute;
+        bottom: 0;
+    }
+}

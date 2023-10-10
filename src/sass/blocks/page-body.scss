@@ -1,0 +1,9 @@
+.page-body {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    color: $black;
+    background: $bg-white;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}

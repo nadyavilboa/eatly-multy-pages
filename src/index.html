@@ -61,7 +61,7 @@
                     Contact
                 </a>
             </nav>
-            <button class="menu__toggle burger">
+            <button class="page-header__menu-toggle burger">
                 <span class="burger__item"></span>
                 <span class="burger__item"></span>
                 <span class="burger__item"></span>
@@ -122,32 +122,89 @@
                                 <use xlink:href="sprite.svg#trustpilot"></use>
                             </svg>
                         </span>
-                        <span class="rating__value"></span>
+                        <span class="rating__value">
+                            <fieldset class="rating__group">
+                                <legend class="visually-hidden">Trustpilot rating rest</legend>
+                                <input
+                                    class="rating__star"
+                                    type="radio"
+                                    name="rating-rest"
+                                    value="1"
+                                    disabled
+                                    aria-label="terrible"
+                                />
+                                <input
+                                    class="rating__star"
+                                    type="radio"
+                                    name="rating-rest"
+                                    value="2"
+                                    disabled
+                                    aria-label="passably"
+                                />
+                                <input
+                                    class="rating__star"
+                                    type="radio"
+                                    name="rating-rest"
+                                    value="3"
+                                    disabled
+                                    aria-label="normal"
+                                />
+                                <input
+                                    class="rating__star"
+                                    type="radio"
+                                    name="rating-rest"
+                                    value="4"
+                                    disabled
+                                    aria-label="good"
+                                />
+                                <input
+                                    class="rating__star"
+                                    type="radio"
+                                    name="rating-rest"
+                                    value="5"
+                                    aria-label="great"
+                                    disabled
+                                    checked
+                                />
+                            </fieldset>
+                        </span>
                         <span class="rating__number">4900+</span>
                     </a>
                 </div>
-                <div class="banner__graphics">
-                    <div class="banner__rest">
+                <div class="banner__graphics graphics">
+                    <div class="graphics__rest">
                         <img
-                            class="banner__rest-img"
+                            class="graphics__rest-img"
                             src="img/food-mobile-2.png"
                             width="35"
                             height="38"
                             alt="dish vegetables and fish" 
                         />
-                        <span class="banner__rest-info">
-                            <span class="banner__rest-name">Chicken Hell</span>
-                            <span class="banner__rest-text">On The Way</span>
-                            <span class="banner__rest-time">3:09 PM</span>
+                        <span class="graphics__rest-info">
+                            <span class="graphics__rest-name">Chicken Hell</span>
+                            <span class="graphics__rest-text">On The Way</span>
+                            <span class="graphics__rest-time">3:09 PM</span>
                         </span>
                     </div>
-                    <img
-                        class="banner__img"
-                        src="img/food-mobile-1.png"
-                        width="204"
-                        height="210"
-                        alt="dish vegetables and fish" 
-                    />
+                    <div class="graphics__ring-img-wrapper">
+                        <img
+                            class="graphics__ring-img"
+                            src="img/food-mobile-1.png"
+                            width="204"
+                            height="210"
+                            alt="dish vegetables and fish" 
+                        />
+                    </div>
+                    <div class="graphics__graph">
+                        <div class="graphics__graph-content">
+                            <img
+                                src="img/graph-mobile.png"
+                                width="98"
+                                height="98"
+                                alt="graphic"
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
