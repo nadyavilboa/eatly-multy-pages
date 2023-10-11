@@ -1,0 +1,103 @@
+.top-rests {
+    padding: 84px 0 66px;
+    border-bottom: 1px solid $header-line;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        color: $graph;
+        text-align: center;
+        font-family: $poppins;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 120%;
+        margin-bottom: 59px;
+    }
+
+    &__list {
+        margin: 0 0 61px 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__item {
+        border-radius: 23px;
+        background: $white;
+        box-shadow: 5px 57px 28px 0px $box-shadow-rest;
+    }
+
+    &__img {
+        border-radius: 23px 23px 0 0;
+    }
+
+    &__info {
+        padding: 9px 21px 14px 27px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    &__stiker {
+        border-radius: 4.3px;
+        padding: 2px 7px;
+        width: fit-content;
+        background: $bg-stiker;
+        color: $stiker-color;
+
+        &--red {
+            background: $bg-red-stiker;
+            color: $stiker-red-color;
+        }
+    }
+
+    &__name {
+        color: $graph;
+        font-family: $poppins;
+        font-size: 20.512px;
+        font-weight: 600;
+        line-height: 162.5%;
+        text-decoration: none;
+    }
+
+    &__group-text,
+    &__rating {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: $grey-time;
+        font-family: $manrope;
+        font-size: 15.384px;
+        font-weight: 400;
+    }
+
+    &__btn-mark {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        bottom: 14px;
+        right: 21px;
+        border: none;
+        border-radius: 50%;
+        background: $mark-save;
+    }
+
+    &__full-link {
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: $grey-time;
+        font-family: $poppins;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: -0.1px;
+        text-decoration: none;
+    }
+}
