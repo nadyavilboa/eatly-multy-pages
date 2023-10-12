@@ -1,0 +1,36 @@
+.review {
+    flex: 0 0 auto;
+    max-width: calc(100vw - 30px);
+    background: $white;
+    padding: 22px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 12px;
+    border: 1px solid $mark-save;
+
+    &__header {
+        display: flex;
+        align-items: center;
+    }
+
+    &__right-icon {
+        margin-left: auto;
+    }
+
+    &__user-data {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+
+    &__user-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3;
+    }
+
+    &__rating {
+        justify-content: flex-start;
+    }
+}

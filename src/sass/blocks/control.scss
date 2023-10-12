@@ -1,0 +1,94 @@
+.control {
+    padding: 85px 0 105px;
+    border-bottom: 1px solid $header-line;
+
+    &__title {
+        color: $black-text;
+        font-family: Poppins;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 32.641px;
+        margin-bottom: 26px;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 80px;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 57px;
+            height: 101px;
+            display: block;
+            position: absolute;
+            bottom: -65px;
+            right: -15px;
+            background: url(../assets/img/bg-8.png) no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__item {
+        border-radius: 8px;
+        background: $white;
+        padding: 3px 11px;
+        max-width: 227px;
+
+        &:hover {
+            box-shadow: 0 13px 20px 0 $box-shadow-control;
+        }
+    }
+
+    &__link {
+        display: flex;
+        position: relative;
+        text-decoration: none;
+    }
+
+    &__img {
+        margin-right: 12px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    &__name {
+        color: $graph;
+        font-family: $poppins;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 140%;
+    }
+
+    &__status {
+        color: $graph;
+        font-family: $poppins;
+        font-size: 9px;
+        font-weight: 500;
+        line-height: 140%;
+
+        &--cancel {
+            color: $status-cancel;
+        }
+    }
+
+    &__time {
+        position: absolute;
+        bottom: 3px;
+        right: 11px;
+        color: $grey-time;
+        font-family: $poppins;
+        font-size: 9px;
+        font-weight: 500;
+        line-height: 140%;
+    }
+}

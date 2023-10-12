@@ -44,19 +44,6 @@
         position: relative;
     }
 
-    &__stiker {
-        border-radius: 4.3px;
-        padding: 2px 7px;
-        width: fit-content;
-        background: $bg-stiker;
-        color: $stiker-color;
-
-        &--red {
-            background: $bg-red-stiker;
-            color: $stiker-red-color;
-        }
-    }
-
     &__name {
         color: $graph;
         font-family: $poppins;

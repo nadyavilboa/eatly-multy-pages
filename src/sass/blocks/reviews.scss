@@ -1,0 +1,55 @@
+.reviews {
+    padding: 90px 0 95px;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        color: $graph;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        margin-bottom: 55px;
+
+        .text-violet {
+            display: block;
+        }
+    }
+
+    &__slider {
+        max-width: calc(100vw - 30px);
+    }
+
+    &__list {
+        margin: 0;
+        margin-bottom: 45px;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    &__buttons {
+        display: flex;
+        margin-bottom: 80px;
+    }
+
+    &__btn {
+        width: 33%;
+        height: 5px;
+        border: none;
+        background: $progress-bar;
+
+        &--active {
+            background: $violet-btn;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.progress-bar {
+    --progress-bar-val: 70%;
+
+    width: 100%;
+    height: 5.5px;
+    border-radius: 46px;
+    background: $progress-bar;
+
+    &::after {
+        content: '';
+        width: var(--progress-bar-val);
+        height: 5.5px;
+        display: block;
+        border-radius: 46px;
+        background: $violet-btn;
+    }
+
+    &--orange {
+        background: $progress-bar-orange;
+
+        &::after {
+            background: $progress-bar-orange-val;
+        }
+    }
+}

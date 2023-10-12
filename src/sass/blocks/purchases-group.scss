@@ -1,0 +1,32 @@
+.purchases-group {
+    border-radius: 15px;
+    background: $white;
+    border: 1px solid $border-light-grey;
+    padding: 27px 22px 26px 24px;
+    box-shadow: 0 40px 30px 5px $box-shadow;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 26px;
+    }
+
+    &__title {
+        color: $select;
+        font-family: $manrope;
+        font-size: 17px;
+        font-weight: 800;
+        line-height: 135%;
+        letter-spacing: 0.186px;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+    }
+}

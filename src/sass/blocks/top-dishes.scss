@@ -1,0 +1,136 @@
+.top-dishes {
+    padding: 85px 0 66px;
+    border-bottom: 1px solid $header-line;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        color: $graph;
+        text-align: center;
+        font-family: $poppins;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 120%;
+        margin-bottom: 59px;
+
+        .text-violet {
+            display: block;
+        }
+    }
+
+    &__list {
+        margin: 0 auto 61px;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    &__item {
+        width: calc(50% - 10px);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 17px 0 20px;
+        background: $white;
+        border-radius: 22px;
+        border: 1px solid $border-card;
+        box-shadow: 4px 54px 27px $box-shadow-rest;
+    }
+
+    &__img {
+        margin: 0 auto 2px;
+        width: 120px;
+
+        &--big {
+            width: 131px;
+        }
+    }
+
+    &__btn-heart {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        width: min-content;
+        height: auto;
+        border: none;
+        background: transparent;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px;
+        margin-bottom: 8px;
+        margin-top: auto;
+    }
+
+    &__name {
+        color: $graph;
+        font-family: $poppins;
+        font-size: 15.08px;
+        font-weight: 600;
+        line-height: 24.504px;
+        text-decoration: none;
+    }
+
+    &__group-text {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: $grey-time;
+        font-family: $manrope;
+        font-size: 15.384px;
+    }
+
+    &__buy {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+
+    &__price {
+        color: $grey-time;
+        font-family: $manrope;
+        font-size: 12.301px;
+        font-weight: 700;
+        line-height: 26.389px;
+    }
+
+    &__big-price {
+        color: $graph;
+        font-size: 16.965px;
+    }
+
+    &__btn-plus {
+        border-radius: 6px;
+        background: $graph;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 26px;
+        height: 26px;
+
+        svg {
+            fill: $white;
+        }
+    }
+
+    &__full-link {
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: $grey-time;
+        font-family: $poppins;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: -0.1px;
+        text-decoration: none;
+    }
+}
