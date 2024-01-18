@@ -2,6 +2,15 @@
     padding: 85px 0 105px;
     border-bottom: 1px solid $header-line;
 
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__wrapper-info {
+        width: 50%;
+    }
+
     &__title {
         color: $black-text;
         font-family: Poppins;
@@ -9,6 +18,12 @@
         font-weight: 700;
         line-height: 32.641px;
         margin-bottom: 26px;
+
+        @media (min-width: $big-tablet) {
+            font-size: 36px;
+            line-height: 41px;
+            margin-bottom: 34px;
+        }
     }
 
     &__list {
@@ -31,6 +46,17 @@
             right: -15px;
             background: url(../assets/img/bg-8.png) no-repeat;
             background-size: contain;
+
+            @media(min-width: $mobile) {
+                width: 70px;
+                height: 130px;
+                bottom: -65px;
+                right: 15%;
+            }
+
+            @media (min-width: $big-tablet) {
+                display: none;
+            }
         }
     }
 

@@ -33,4 +33,8 @@
     &__rating {
         justify-content: flex-start;
     }
+
+    @media(min-width: $tablet) {
+        max-width: 100%;
+    }
 }

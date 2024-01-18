@@ -4,6 +4,20 @@
 
     &__wrapper {
         width: 100%;
+
+        @media (min-width: $big-tablet) {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            padding-left: 130px;
+        }
+    }
+
+    &-wrapper-info {
+        @media (min-width: $big-tablet) {
+            max-width: 45%;
+            padding-top: 53px;
+        }
     }
 
     &__title {
@@ -14,6 +28,11 @@
         font-weight: 700;
         line-height: 114%;
         margin-bottom: 37px;
+
+        @media (min-width: $big-tablet) {
+            font-size: 36px;
+            text-align: left;
+        }
     }
 
     &__list {
@@ -29,10 +48,30 @@
         font-family: $inter;
         font-size: 11.96px;
         line-height: 150%;
+
+        @media (min-width: $big-tablet) {
+            font-size: 14.46px;
+        }
     }
 
     &__btn {
         margin: 0 auto 100px;
+
+        @media (min-width: $big-tablet) {
+            margin: 0 0 100px;
+            position: relative;
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -50px;
+                left: 100px;
+                width: 110px;
+                height: 62px;
+                background: url(../assets/img/bg-8-tablet.png) no-repeat;
+            }
+        }
     }
 
     &__img {
@@ -52,6 +91,14 @@
             top: -110px;
             left: 40px;
             z-index: 5;
+
+            @media(min-width: $mobile) {
+                left: 20%;
+            }
+
+            @media (min-width: $big-tablet) {
+                display: none;
+            }
         }
 
         &::after {
@@ -65,15 +112,39 @@
             top: 0;
             right: 25px;
             z-index: 5;
+
+            @media(min-width: $mobile) {
+                top: -10px;
+                right: 15%;
+            }
+
+            @media (min-width: $big-tablet) {
+                width: 37px;
+                height: 44px;
+                background: url(../assets/img/bg-4-tablet.png) no-repeat;
+                background-size: contain;
+                top: 14px;
+                right: -16%;
+            }
         }
     }
 
     &__img-phone {
         z-index: 0;
+
+        @media (min-width: $big-tablet) {
+            width: 216px;
+            height: 433px;
+        }
     }
 
     &__img-phone--display {
         z-index: 1;
         position: absolute;
+
+        @media (min-width: $big-tablet) {
+            width: 192px;
+            height: 412px;
+        }
     }
 }

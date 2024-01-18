@@ -1,0 +1,65 @@
+.subscribe {
+    padding: 35px 27px 95px;
+    border-radius: 15px;
+    background: $violet-btn;
+    opacity: 0.8;
+    width: 100%;
+    position: relative;
+    margin-bottom: 95px;
+
+    &__title {
+        text-align: center;
+        color: $white;
+        font-family: $poppins;
+        font-size: 41px;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__input-wrapper {
+        background: $white;
+        border-radius: 9px;
+        padding: 7px 7px 7px 10px;
+        display: flex;
+        gap: 20px;
+    }
+
+    &__input {
+        max-width: 100px;
+        border: none;
+    }
+
+    &__input,
+    &__input::placeholder {
+        color: $input;
+        font-family: $poppins;
+        font-size: 10.58px;
+        font-weight: 400;
+        letter-spacing: 0.317px;
+    }
+
+    &__btn {
+        padding: 10px 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $violet-btn;
+        color: $white;
+        border: 0;
+        border-radius: 7px;
+    }
+
+    &__img {
+        position: absolute;
+        bottom: -27px;
+        bottom: -110px;
+        left: calc(50% - 84px);;
+    }
+}

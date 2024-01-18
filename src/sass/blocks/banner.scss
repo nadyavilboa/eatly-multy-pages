@@ -1,8 +1,24 @@
 .banner {
     padding: 57px 0 75px;
 
+    .container {
+        @media (min-width: $tablet) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (min-width: $big-tablet) {
+            justify-content: flex-start;
+        }
+    }
+
     &__content {
         margin-bottom: 72px;
+
+        @media (min-width: $tablet) {
+            width: 50%;
+            margin-bottom: 0;
+        }
     }
 
     &__title {
@@ -20,6 +36,27 @@
             letter-spacing: -1.85px;
             line-height: 120%;
             text-align: center;
+
+            @media (min-width: $tablet) {
+                display: none;
+            }
+
+            &--tablet {
+                display: none;
+                
+                @media (min-width: $tablet) {
+                    display: block;
+                    text-align: left;
+                }
+
+                @media (min-width: $big-tablet) {
+                    font-size: 53px;
+                }
+            }
+        }
+
+        @media (min-width: $tablet) {
+            align-items: flex-start;
         }
     }
 
@@ -39,19 +76,33 @@
             background: $black;
             margin-top: 4px;
         }
+
+        @media (min-width: $big-tablet) {
+            font-size: 10px;
+            opacity: 0.2;
+        }
     }
 
     &__text {
         color: $grey-text;
         text-align: center;
         font-family: $inter;
-        font-size: 11.097px;
+        font-size: 11px;
         line-height: 155%;
         margin-bottom: 41px;
 
         .text-violet {
             font-weight: 500;
             opacity: 0.7;
+        }
+
+        @media (min-width: $tablet) {
+            text-align: left;
+        }
+
+        @media (min-width: $big-tablet) {
+            font-size: 12px;
+            max-width: 360px;
         }
     }
 
@@ -60,5 +111,13 @@
         justify-content: center;
         gap: 14px;
         margin-bottom: 35px;
+
+        @media (min-width: $tablet) {
+            justify-content: flex-start;
+        }
+    }
+
+    @media (min-width: $big-tablet) {
+        padding: 75px 0;
     }
 }

@@ -3,6 +3,10 @@
     justify-content: center;
     align-items: center;
 
+    @media (min-width: $tablet) {
+        justify-content: flex-start;
+    }
+
     &__group {
         margin: 0;
         padding: 0;

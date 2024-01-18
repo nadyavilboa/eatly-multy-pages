@@ -3,6 +3,12 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    border: 1px solid $border-light-grey;
+    border-radius: 11px;
+
+    @media (min-width: $big-tablet) {
+        border-radius: 13px;
+    }
 
     &__info {
         display: flex;

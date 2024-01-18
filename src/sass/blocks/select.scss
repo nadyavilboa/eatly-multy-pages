@@ -1,5 +1,12 @@
 .select {
     height: min-content;
+    border-radius: 7px;
+    background: $bg-select;
+    padding: 7px 10px;
+
+    @media (min-width: $big-tablet) {
+        border-radius: 9px;
+    }
 }
 
 .select__header {

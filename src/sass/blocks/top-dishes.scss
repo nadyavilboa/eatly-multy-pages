@@ -16,8 +16,16 @@
         line-height: 120%;
         margin-bottom: 59px;
 
+        @media (min-width: $big-tablet) {
+            font-size: 32px;
+        }
+
         .text-violet {
             display: block;
+
+            @media (min-width: $big-tablet) {
+                display: inline;
+            }
         }
     }
 
@@ -28,6 +36,10 @@
         display: flex;
         flex-wrap: wrap;
         gap: 15px;
+
+        @media (min-width: $big-tablet) {
+            margin: 0 0 61px;
+        }
     }
 
     &__item {
@@ -40,6 +52,18 @@
         border-radius: 22px;
         border: 1px solid $border-card;
         box-shadow: 4px 54px 27px $box-shadow-rest;
+
+        &:nth-child(n+4) {
+            display: none;
+        }
+
+        @media (min-width: $big-tablet) {
+            width: calc(20% - 12px);
+
+            &:nth-child(n+4) {
+                display: flex;
+            }
+        }
     }
 
     &__img {
@@ -59,6 +83,13 @@
         height: auto;
         border: none;
         background: transparent;
+
+        svg {
+            @media (min-width: $big-tablet) {
+                width: 16px;
+                height: 13px;
+            }
+        }
     }
 
     &__info {
@@ -76,6 +107,10 @@
         font-weight: 600;
         line-height: 24.504px;
         text-decoration: none;
+
+        @media (min-width: $big-tablet) {
+            font-size: 16px;
+        }
     }
 
     &__group-text {
@@ -85,6 +120,10 @@
         color: $grey-time;
         font-family: $manrope;
         font-size: 15.384px;
+
+        @media (min-width: $big-tablet) {
+            font-size: 12px;
+        }
     }
 
     &__buy {
@@ -99,11 +138,19 @@
         font-size: 12.301px;
         font-weight: 700;
         line-height: 26.389px;
+
+        @media (min-width: $big-tablet) {
+            font-size: 13px;
+        }
     }
 
     &__big-price {
         color: $graph;
         font-size: 16.965px;
+
+        @media (min-width: $big-tablet) {
+            font-size: 18px;
+        }
     }
 
     &__btn-plus {
@@ -119,18 +166,10 @@
         svg {
             fill: $white;
         }
-    }
 
-    &__full-link {
-        align-self: flex-end;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        color: $grey-time;
-        font-family: $poppins;
-        font-size: 20px;
-        font-weight: 500;
-        letter-spacing: -0.1px;
-        text-decoration: none;
+        @media (min-width: $big-tablet) {
+            width: 28px;
+            height: 28px;
+        }
     }
 }

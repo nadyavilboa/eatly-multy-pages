@@ -4,6 +4,12 @@
     width: fit-content;
     background: $bg-stiker;
     color: $stiker-color;
+    font-family: $poppins;
+    font-size: 10px;
+
+    @media (min-width: $big-tablet) {
+        font-size: 9px;
+    }
 
     &--red {
         background: $bg-red-stiker;

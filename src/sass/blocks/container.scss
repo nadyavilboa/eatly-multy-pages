@@ -10,6 +10,10 @@
         max-width: none;
     }
 
+    @media (min-width: $big-tablet) {
+        padding: 0 70px;
+    }
+
     @media (min-width: $desktop) {
         padding: 0 100px;
     }

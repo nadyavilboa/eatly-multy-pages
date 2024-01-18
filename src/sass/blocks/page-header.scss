@@ -11,11 +11,20 @@
         position: absolute;
         left: 15px;
         bottom: 0;
+
+        @media (min-width: $big-tablet) {
+            left: 70px;
+            width: calc(100% - 140px);
+        }
     }
 
     .page-header__navigation,
     .page-header__auth {
         display: none;
+
+        @media(min-width: $tablet) {
+            display: flex;
+        }
     }
 
     &__wrapper {

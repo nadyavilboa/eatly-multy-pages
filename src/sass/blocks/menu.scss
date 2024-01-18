@@ -1,0 +1,98 @@
+.menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background: $footer;
+    padding: 30px 30px 110px 30px;
+    z-index: 10;
+
+    &__btn-close {
+        display: none;
+        z-index: 10;
+        border: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    &__link {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: $poppins;
+        font-weight: 600;
+        color: $violet-btn;
+
+        @media(min-width: $tablet) {
+            text-transform: none;
+            font-size: 19px;
+            font-weight: 500;
+            color: $footer-menu;
+        }
+    }
+
+    &--auth {
+        z-index: 10;
+        position: absolute;
+        left: 0;
+        top: 220px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        @media(min-width: $tablet) {
+            display: flex;
+            gap: 6px;
+            position: static;
+            width: auto;
+            z-index: 1;
+        }
+    }
+
+    &__auth-link {
+        text-transform: uppercase;
+        font-family: $poppins;
+        font-weight: 600;
+        font-size: 17px;
+        background: $white;
+        color: $violet-btn;
+        border: 1px solid $violet-btn;
+
+        @media(min-width: $tablet) {
+            text-transform: none;
+            border: 1px solid transparent;
+            color: $footer-menu;
+            font-weight: 700;
+        }
+
+        &--sign-up {
+            background: $violet-btn;
+            color: $white;
+        }
+    }
+
+    @media(min-width: $tablet) {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        z-index: 1;
+        padding: 0;
+        width: auto;
+        background: transparent;
+    }
+
+    @media(min-width: $big-tablet) {
+        margin-left: -20%;
+    }
+}
+
+.menu.menu--open,
+.menu.menu--open ~ .menu__btn-close,
+.menu.menu--open ~ .menu--auth {
+    display: flex;
+}
