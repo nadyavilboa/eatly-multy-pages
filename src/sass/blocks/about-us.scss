@@ -22,7 +22,7 @@
         flex-direction: column;
         align-items: center;
 
-        @media(min-width: $big-tablet) {
+        @media (min-width: $big-tablet) {
             border-bottom: 1px solid transparent;
             border-right: 1px solid $about-us-line-tablet;
             padding: 0;
@@ -33,7 +33,7 @@
     &__item:first-child {
         padding-top: 0;
 
-        @media(min-width: $big-tablet) {
+        @media (min-width: $big-tablet) {
             padding: 0;
         }
     }
@@ -42,7 +42,7 @@
         padding-bottom: 0;
         border-bottom: 1px solid transparent;
 
-        @media(min-width: $big-tablet) {
+        @media (min-width: $big-tablet) {
             padding: 0;
             border-right: 1px solid transparent;
         }
@@ -60,6 +60,11 @@
         @media (min-width: $big-tablet) {
             font-size: 31px;
         }
+
+        @media (min-width: $desktop) {
+            font-size: 43px;
+            margin-bottom: 11px;
+        }
     }
 
     &__text {
@@ -75,13 +80,25 @@
             flex-direction: column;
             font-size: 10px;
         }
+
+        @media (min-width: $desktop) {
+            font-size: 14px;
+        }
     }
 
-    @media(min-width: $big-tablet) {
+    @media (min-width: $big-tablet) {
         background: 
             url(../assets/img/bg-1-tablet.png) no-repeat,
             url(../assets/img/bg-2-tablet.png) no-repeat bottom right, 
             $violet;
         padding: 40px 36px 40px 45px;
+    }
+
+    @media (min-width: $desktop) {
+        background: 
+            url(../assets/img/bg-1-desktop.png) no-repeat,
+            url(../assets/img/bg-2-desktop.png) no-repeat bottom right, 
+        $violet;
+        padding: 57px 36px 55px 45px;
     }
 }

@@ -6,6 +6,11 @@
 
     @media (min-width: $big-tablet) {
         border-radius: 9px;
+        padding: 9px 13px;
+    }
+
+    @media (min-width: $desktop) {
+        padding: 12px 18px;
     }
 }
 
@@ -21,6 +26,21 @@
     font-weight: 700;
     line-height: 150%;
     letter-spacing: 0.372px;
+
+    & svg {
+        @media (min-width: $desktop) {
+            width: 12px;
+            height: 8px;
+        }
+    }
+
+    @media (min-width: $big-tablet) {
+        font-size: 13px;
+    }
+
+    @media (min-width: $desktop) {
+        font-size: 18px;
+    }
 }
 
 .select__list {

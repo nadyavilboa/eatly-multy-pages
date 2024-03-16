@@ -7,10 +7,6 @@
     font-family: $poppins;
     font-size: 10px;
 
-    @media (min-width: $big-tablet) {
-        font-size: 9px;
-    }
-
     &--red {
         background: $bg-red-stiker;
         color: $stiker-red-color;
@@ -19,5 +15,13 @@
     &--green {
         background: $bg-green-stiker;
         color: $stiker-green-color;
+    }
+
+    @media (min-width: $big-tablet) {
+        font-size: 9px;
+    }
+
+    @media (min-width: $desktop) {
+        font-size: 13px;
     }
 }

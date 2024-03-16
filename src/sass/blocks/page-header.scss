@@ -16,13 +16,18 @@
             left: 70px;
             width: calc(100% - 140px);
         }
+
+        @media (min-width: $desktop) {
+            width: calc(100% - 200px);
+            left: 100px;
+        }
     }
 
     .page-header__navigation,
     .page-header__auth {
         display: none;
 
-        @media(min-width: $tablet) {
+        @media (min-width: $tablet) {
             display: flex;
         }
     }
@@ -35,5 +40,9 @@
 
     &__logo {
         display: flex;
+    }
+
+    @media (min-width: $desktop) {
+        padding: 48px 0 25px;
     }
 }

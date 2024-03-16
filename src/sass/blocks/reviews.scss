@@ -5,6 +5,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        
+        @media (min-width: $big-tablet) {
+            overflow-x: hidden;
+        }
     }
 
     &__title {
@@ -19,11 +23,31 @@
 
         .text-violet {
             display: block;
+
+            @media (min-width: $big-tablet) {
+                display: inline;
+            }
+        }
+
+        @media (min-width: $desktop) {
+            font-size: 45px;
+            margin-bottom: 80px;
         }
     }
 
     &__slider {
         max-width: calc(100vw - 30px);
+        overflow-x: hidden;
+
+        @media (min-width: $big-tablet) {
+            position: relative;
+            margin-bottom: 130px;
+            overflow-x: visible;
+        }
+
+        @media (min-width: $desktop) {
+            margin-bottom: 218px;
+        }
     }
 
     &__list {
@@ -34,12 +58,31 @@
         display: flex;
         gap: 20px;
         position: relative;
-        overflow-x: hidden;
+
+        @media (min-width: $big-tablet) {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: $desktop) {
+            gap: 46px;
+        }
     }
 
     &__buttons {
         display: flex;
         margin-bottom: 80px;
+
+        @media (min-width: $big-tablet) {
+            position: absolute;
+            bottom: -77px;
+            right: 60px;
+            width: calc(100vw - 65%);
+        }
+
+        @media (min-width: $desktop) {
+            right: 10px;
+            width: calc(100vw - 58%);
+        }
     }
 
     &__btn {
@@ -48,8 +91,30 @@
         border: none;
         background: $progress-bar;
 
-        &--active {
+        &:first-child {
+            @media (min-width: $desktop) {
+                border-radius: 18px 0 0 18px;
+            }
+        }
+
+        &:last-child {
+            @media (min-width: $desktop) {
+                border-radius: 0 18px 18px 0;
+            }
+        }
+
+        &--active.reviews__btn {
             background: $violet-btn;
+            border-radius: 36px;
+        }
+
+        @media (min-width: $big-tablet) {
+            border-radius: 36px;
+        }
+
+        @media (min-width: $desktop) {
+            height: 10px;
+            border-radius: 0;
         }
     }
 }

@@ -16,6 +16,16 @@
         height: 14px;
         background: url('../assets/img/star-grey.png') repeat-x;
         background-size: 14px auto;
+
+        @media (min-width: $big-tablet) {
+            width: 98px;
+            height: 15px;
+        }
+
+        @media (min-width: $desktop) {
+            width: 138px;
+            height: 23px;
+        }
     }
 
     &__star {
@@ -68,6 +78,13 @@
         margin-right: 16px;
     }
 
+    &__logo svg {
+        @media (min-width: $desktop) {
+            width: 123px;
+            height: 30px;
+        }
+    }
+
     &__value {
         margin-right: 7px;
     }
@@ -78,5 +95,9 @@
         font-size: 13px;
         font-weight: 500;
         opacity: 0.7;
+
+        @media (min-width: $desktop) {
+            font-size: 16px;
+        }
     }
 }

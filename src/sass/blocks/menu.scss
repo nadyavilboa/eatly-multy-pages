@@ -27,11 +27,15 @@
         font-weight: 600;
         color: $violet-btn;
 
-        @media(min-width: $tablet) {
+        @media (min-width: $tablet) {
             text-transform: none;
             font-size: 19px;
             font-weight: 500;
             color: $footer-menu;
+        }
+
+        @media (min-width: $desktop) {
+            font-size: 18px;
         }
     }
 
@@ -45,7 +49,7 @@
         justify-content: center;
         gap: 20px;
 
-        @media(min-width: $tablet) {
+        @media (min-width: $tablet) {
             display: flex;
             gap: 6px;
             position: static;
@@ -59,24 +63,30 @@
         font-family: $poppins;
         font-weight: 600;
         font-size: 17px;
-        background: $white;
+        background: transparent;
         color: $violet-btn;
         border: 1px solid $violet-btn;
 
-        @media(min-width: $tablet) {
+        @media (min-width: $tablet) {
             text-transform: none;
             border: 1px solid transparent;
             color: $footer-menu;
             font-weight: 700;
         }
+    }
 
-        &--sign-up {
-            background: $violet-btn;
-            color: $white;
+    &__auth-link--sign-up {
+        background: $violet-btn;
+        color: $white;
+
+        @media (min-width: $desktop) {
+            border-radius: 18px;
+            font-size: 18px;
+            font-weight: 500;
         }
     }
 
-    @media(min-width: $tablet) {
+    @media (min-width: $tablet) {
         display: flex;
         flex-direction: row;
         position: static;
@@ -86,8 +96,12 @@
         background: transparent;
     }
 
-    @media(min-width: $big-tablet) {
+    @media (min-width: $big-tablet) {
         margin-left: -20%;
+    }
+
+    @media (min-width: $desktop) {
+        margin-left: -40%;
     }
 }
 

@@ -10,6 +10,10 @@
         @media (min-width: $big-tablet) {
             justify-content: flex-start;
         }
+
+        @media (min-width: $desktop) {
+            justify-content: space-between;
+        }
     }
 
     &__content {
@@ -51,6 +55,13 @@
 
                 @media (min-width: $big-tablet) {
                     font-size: 53px;
+                    max-width: 70%;
+                }
+
+                @media (min-width: $desktop) {
+                    font-size: 75px;
+                    margin-bottom: 16px;
+                    max-width: none;
                 }
             }
         }
@@ -81,6 +92,11 @@
             font-size: 10px;
             opacity: 0.2;
         }
+
+        @media (min-width: $desktop) {
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
     }
 
     &__text {
@@ -104,6 +120,12 @@
             font-size: 12px;
             max-width: 360px;
         }
+
+        @media (min-width: $desktop) {
+            font-size: 18px;
+            max-width: 500px;
+            margin-bottom: 53px;
+        }
     }
 
     &__btn-group {
@@ -119,5 +141,9 @@
 
     @media (min-width: $big-tablet) {
         padding: 75px 0;
+    }
+
+    @media (min-width: $desktop) {
+        padding: 100px 0;
     }
 }

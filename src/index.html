@@ -196,22 +196,28 @@
                         </span>
                     </div>
                     <div class="graphics__ring-img-wrapper">
-                        <img
-                            class="graphics__ring-img"
-                            src="img/food-mobile-1.png"
-                            width="204"
-                            height="210"
-                            alt="dish vegetables and fish" 
-                        />
+                        <picture>
+                            <source media="(min-width:1024px)" srcset="img/food-tablet-1.png"/>
+                            <img
+                                class="graphics__ring-img"
+                                src="img/food-mobile-1.png"
+                                width="204"
+                                height="210"
+                                alt="dish vegetables and fish" 
+                            />
+                        </picture>
                     </div>
                     <div class="graphics__graph">
                         <div class="graphics__graph-content">
-                            <img
-                                src="img/graph-mobile.png"
-                                width="98"
-                                height="98"
-                                alt="graphic"
-                            />
+                            <picture>
+                                <source media="(min-width:1024px)" srcset="img/graph-tablet.png"/>
+                                <img
+                                    src="img/graph-mobile.png"
+                                    width="98"
+                                    height="98"
+                                    alt="graphic"
+                                />
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -784,7 +790,7 @@
             <div class="reviews__wrapper container">
                 <h2 class="reviews__title text-title">
                     <span class="text-bold">
-                        <span class="text-violet">Customer</span>Say
+                        <span class="text-violet">Customer</span> Say
                     </span>
                 </h2>
                 <div class="reviews__slider">
@@ -1052,7 +1058,7 @@
         <div class="page-footer__wrapper container">
             <div class="page-footer__top">
                 <a
-                    class="page-footer__logo"
+                    class="page-footer__logo page-footer__logo--mobile"
                     href="#"
                     target="_blank"
                 >
@@ -1067,76 +1073,99 @@
                         <use xlink:href="sprite.svg#logo"></use>
                     </svg>
                 </a>
-                <span class="page-footer__social-links">
-                    <a
-                        class="page-footer__social-link"
-                        href="#"
-                        target="_blank"
-                    >
-                        <svg width="16" height="16">
-                            <use xlink:href="sprite.svg#instagram"></use>
-                        </svg>
-                    </a>
-                    <a
-                        class="page-footer__social-link"
-                        href="#"
-                        target="_blank"
-                    >
-                        <svg width="16" height="15">
-                            <use xlink:href="sprite.svg#linkedin"></use>
-                        </svg>
-                    </a>
-                    <a
-                        class="page-footer__social-link"
-                        href="#"
-                        target="_blank"
-                    >
-                        <svg width="7" height="16">
-                            <use xlink:href="sprite.svg#facebook"></use>
-                        </svg>
-                    </a>
-                    <a
-                        class="page-footer__social-link"
-                        href="#"
-                        target="_blank"
-                    >
-                        <svg width="16" height="13">
-                            <use xlink:href="sprite.svg#twitter"></use>
-                        </svg>
-                    </a>
+                <span class="page-footer__wrapper--top">
+                    <span class="page-footer__copyright page-footer__copyright--tablet">
+                        © 2023 <span class="company-name">Eatly</span> All Rights Reserved.
+                    </span>
+                    <span class="page-footer__social-links">
+                        <a
+                            class="page-footer__social-link"
+                            href="#"
+                            target="_blank"
+                        >
+                            <svg width="16" height="16">
+                                <use xlink:href="sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                        <a
+                            class="page-footer__social-link"
+                            href="#"
+                            target="_blank"
+                        >
+                            <svg width="16" height="15">
+                                <use xlink:href="sprite.svg#linkedin"></use>
+                            </svg>
+                        </a>
+                        <a
+                            class="page-footer__social-link"
+                            href="#"
+                            target="_blank"
+                        >
+                            <svg width="7" height="16">
+                                <use xlink:href="sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                        <a
+                            class="page-footer__social-link"
+                            href="#"
+                            target="_blank"
+                        >
+                            <svg width="16" height="13">
+                                <use xlink:href="sprite.svg#twitter"></use>
+                            </svg>
+                        </a>
+                    </span>
                 </span>
             </div>
-            <ul class="page-footer__menu">
-                <li class="page-footer__menu-item">
-                    <a
-                        class="page-footer__menu-link"
-                        href="#"
-                        target="_blank"
-                    >Blog</a>
-                </li>
-                <li class="page-footer__menu-item">
-                    <a
-                        class="page-footer__menu-link"
-                        href="#"
-                        target="_blank"
-                    >Pricing</a>
-                </li>
-                <li class="page-footer__menu-item">
-                    <a
-                        class="page-footer__menu-link"
-                        href="#"
-                        target="_blank"
-                    >About Us</a>
-                </li>
-                <li class="page-footer__menu-item">
-                    <a
-                        class="page-footer__menu-link"
-                        href="#"
-                        target="_blank"
-                    >Contact</a>
-                </li>
-            </ul>
-            <div class="page-footer__copyright">
+            <div class="page-footer__wrapper--bottom">
+                <a
+                    class="page-footer__logo page-footer__logo--tablet"
+                    href="#"
+                    target="_blank"
+                >
+                    <span class="visually-hidden">
+                        Eatly Logotype
+                    </span>
+                    <svg
+                        class="page-footer__logo-icon"
+                        width="112"
+                        height="42"
+                    >
+                        <use xlink:href="sprite.svg#logo"></use>
+                    </svg>
+                </a>
+                <ul class="page-footer__menu">
+                    <li class="page-footer__menu-item">
+                        <a
+                            class="page-footer__menu-link"
+                            href="#"
+                            target="_blank"
+                        >Blog</a>
+                    </li>
+                    <li class="page-footer__menu-item">
+                        <a
+                            class="page-footer__menu-link"
+                            href="#"
+                            target="_blank"
+                        >Pricing</a>
+                    </li>
+                    <li class="page-footer__menu-item">
+                        <a
+                            class="page-footer__menu-link"
+                            href="#"
+                            target="_blank"
+                        >About Us</a>
+                    </li>
+                    <li class="page-footer__menu-item">
+                        <a
+                            class="page-footer__menu-link"
+                            href="#"
+                            target="_blank"
+                        >Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="page-footer__copyright page-footer__copyright--mobile">
                 © 2023 <span class="company-name">Eatly</span> All Rights Reserved.
             </div>
         </div>

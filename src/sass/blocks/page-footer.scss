@@ -2,21 +2,99 @@
     padding: 55px 15px 36px;
     background: $footer;
 
+    &__wrapper {
+        @media (min-width: $big-tablet) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__wrapper--top,
+    &__wrapper--bottom {
+        @media (min-width: $big-tablet) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__wrapper--top {
+        @media (min-width: $big-tablet) {
+            width: 100%;
+            padding-top: 41px;
+        }
+
+        @media (min-width: $desktop) {
+            width: 100%;
+            padding-top: 57px;
+        }
+    }
+
+    &__wrapper--bottom {
+        @media (min-width: $big-tablet) {
+            padding-bottom: 21px;
+            border-bottom: 1px solid $header-line;
+        }
+
+        @media (min-width: $desktop) {
+            padding-bottom: 29px;
+        }
+    }
+
     &__top {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 53px;
+
+        @media (min-width: $big-tablet) {
+            order: 2;
+            margin-bottom: 0;
+        }
+    }
+
+    &__logo--mobile {
+        @media (min-width: $big-tablet) {
+            display: none;
+        }
+    }
+
+    &__logo--tablet {
+        display: none;
+
+        & svg {
+            @media (min-width: $desktop) {
+                width: 151px;
+                height: 57px;
+            } 
+        }
+
+        @media (min-width: $big-tablet) {
+            display: block;
+        }
     }
 
     &__social-links {
         display: flex;
         align-items: center;
         gap: 15px;
+
+        @media (min-width: $desktop) {
+            gap: 54px;
+        }
     }
 
     &__social-link {
         height: 16px;
+
+        & svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        @media (min-width: $desktop) {
+            height: 22px;
+        }
     }
 
     &__menu {
@@ -28,6 +106,16 @@
         gap: 30px;
         padding-bottom: 32px;
         border-bottom: 1px solid $header-line;
+
+        @media (min-width: $big-tablet) {
+            flex-direction: row;
+            padding-bottom: 0;
+            border-bottom: 1px solid transparent;
+        }
+
+        @media (min-width: $desktop) {
+            gap: 70px;
+        }
     }
 
     &__menu-link {
@@ -36,13 +124,44 @@
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
-        line-height: 18.884px;
+        line-height: 136%;
         text-transform: uppercase;
         text-decoration: none;
+
+        @media (min-width: $big-tablet) {
+            text-transform: none;
+            color: $footer-link-tablet;
+            font-size: 18px;
+        }
     }
 
     &__copyright {
         padding-top: 26px;
         text-align: center;
+
+        &--mobile {
+            @media (min-width: $big-tablet) {
+                display: none;
+            }
+        }
+
+        &--tablet {
+            display: none;
+
+            @media (min-width: $big-tablet) {
+                padding-top: 0;
+                display: block;
+                font-size: 17px;
+                color: $footer-link-tablet;
+            }
+        }
+    }
+
+    @media (min-width: $big-tablet) {
+        padding: 68px 0 59px;
+    }
+
+    @media (min-width: $desktop) {
+        padding: 96px 0 80px;
     }
 }
