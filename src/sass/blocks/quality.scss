@@ -103,15 +103,18 @@
                 height: 62px;
                 background: url(../assets/img/bg-8-tablet.png) no-repeat;
             }
-
-            &:after {
-                bottom: -60px;
-                left: 130px;
-            }
         }
 
         @media (min-width: $desktop) {
             font-size: 18px;
+
+            &:after {
+                bottom: -70px;
+                left: 150px;
+                height: 87px;
+                width: 154px;
+                background: url(../assets/img/bg-8-desktop.png) no-repeat;
+            }
         }
     }
 
@@ -164,12 +167,16 @@
                 height: 44px;
                 background: url(../assets/img/bg-4-tablet.png) no-repeat;
                 background-size: contain;
-                top: 14px;
-                right: -16%;
+                top: -11px;
+                right: -18%;
             }
 
             @media (min-width: $desktop) {
+                width: 52px;
+                height: 62px;
                 top: 0;
+                background: url(../assets/img/bg-4-desktop.png) no-repeat;
+                background-size: contain;
             }
         }
     }
@@ -191,6 +198,9 @@
     &__img-phone--display {
         z-index: 1;
         position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 17px;
 
         @media (min-width: $big-tablet) {
             width: 192px;
@@ -200,6 +210,9 @@
         @media (min-width: $desktop) {
             width: 270px;
             height: 580px;
+            left: 17px;
+            top: 22px;
+            transform: none;
         }
     }
 

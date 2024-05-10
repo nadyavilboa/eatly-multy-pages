@@ -5,15 +5,19 @@
 
     &__wrapper {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
 
         @media (min-width: $big-tablet) {
+            flex-direction: row;
             align-items: flex-start;
         }
     }
 
     &__wrapper-info {
-        width: 50%;
+        @media (min-width: $big-tablet) {
+            width: 50%;
+        }
     }
 
     &__title {

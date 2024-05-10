@@ -127,6 +127,12 @@
         line-height: 136%;
         text-transform: uppercase;
         text-decoration: none;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+            color: $black;
+            border-bottom: 1px solid $black;
+        }
 
         @media (min-width: $big-tablet) {
             text-transform: none;

@@ -11,6 +11,10 @@
         rel="stylesheet"
     >
     <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body class="page-body">
     <header class="page-header">
@@ -61,21 +65,27 @@
                     Contact
                 </a>
             </nav>
+            <button class="menu__btn-close">
+                <svg width="32" height="32"
+                >
+                    <use xlink:href="sprite.svg#close"></use>
+                </svg>
+            </button>
             <button class="page-header__menu-toggle burger">
                 <span class="burger__item"></span>
                 <span class="burger__item"></span>
                 <span class="burger__item"></span>
             </button>
-            <div class="page-header__auth auth">
+            <div class="page-header__auth menu--auth">
                 <a
-                    class="auth__link btn"
+                    class="menu__auth-link btn"
                     href="#"
                     target="_blank"
                 >
                     Login
                 </a>
                 <a
-                    class="auth__link auth__link--sign-up btn"
+                    class="menu__auth-link menu__auth-link--sign-up btn"
                     href="#"
                     target="_blank"
                 >
@@ -93,6 +103,9 @@
                         <span class="banner__caption">Over 1000 users</span>
                         <span class="text-bold">
                             Enjoy Foods Over <span class="text-violet">World</span>
+                        </span>
+                        <span class="text-bold text-bold--tablet">
+                            Enjoy Foods All Over The <span class="text-violet">World</span>
                         </span>
                     </h2>
                     <p class="banner__text">
@@ -187,22 +200,29 @@
                         </span>
                     </div>
                     <div class="graphics__ring-img-wrapper">
-                        <img
-                            class="graphics__ring-img"
-                            src="img/food-mobile-1.png"
-                            width="204"
-                            height="210"
-                            alt="dish vegetables and fish" 
-                        />
+                        <picture>
+                            <source media="(min-width:1024px)" srcset="img/food-tablet-1.png"/>
+                            <img
+                                class="graphics__ring-img"
+                                src="img/food-mobile-1.png"
+                                width="204"
+                                height="210"
+                                alt="dish vegetables and fish" 
+                            />
+                        </picture>
                     </div>
                     <div class="graphics__graph">
                         <div class="graphics__graph-content">
-                            <img
-                                src="img/graph-mobile.png"
-                                width="98"
-                                height="98"
-                                alt="graphic"
-                            />
+                            <picture>
+                                <source media="(min-width:1280px)" srcset="img/graph-desktop.png"/>
+                                <source media="(min-width:1024px)" srcset="img/graph-tablet.png"/>
+                                <img
+                                    src="img/graph-mobile.png"
+                                    width="98"
+                                    height="98"
+                                    alt="graphic"
+                                />
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -240,42 +260,50 @@
         </section>
         <section class="quality">
             <div class="quality__wrapper container">
-                <h2 class="quality__title text-title">
-                    <span class="text-bold">
-                        Premium <span class="text-violet">Quality</span> For Your Health
-                    </span>
-                </h2>
-                <ul class="quality__list">
-                    <li class="quality__item">
-                        Premium quality food is made with ingredients
-                        that are packed with essential vitamins, minerals.
-                    </li>
-                    <li class="quality__item">
-                        These foods promote overall wellness by
-                        support healthy digestion and boosting immunity
-                    </li>
-                </ul>
-                <button class="quality__btn btn btn-violet">
-                    <span class="quality__btn-text">Download</span>
-                    <svg width="18" height="18">
-                        <use xlink:href="sprite.svg#arrow"></use>
-                    </svg>
-                </button>
+                <div class="quality-wrapper-info">
+                    <h2 class="quality__title text-title">
+                        <span class="text-bold">
+                            Premium <span class="text-violet">Quality</span> For Your Health
+                        </span>
+                    </h2>
+                    <ul class="quality__list">
+                        <li class="quality__item">
+                            Premium quality food is made with ingredients
+                            that are packed with essential vitamins, minerals.
+                        </li>
+                        <li class="quality__item">
+                            These foods promote overall wellness by
+                            support healthy digestion and boosting immunity
+                        </li>
+                    </ul>
+                    <button class="quality__btn btn btn-violet">
+                        <span class="quality__btn-text">Download</span>
+                        <svg width="18" height="18">
+                            <use xlink:href="sprite.svg#arrow"></use>
+                        </svg>
+                    </button>
+                </div>
                 <div class="quality__img">
-                    <img
-                        class="quality__img-phone"
-                        src="img/phone.png"
-                        width="171"
-                        height="342"
-                        alt="" 
-                    />
-                    <img
-                        class="quality__img-phone quality__img-phone--display"
-                        src="img/phone-display.png"
-                        width="151"
-                        height="325"
-                        alt="iphone with open our app" 
-                    />
+                    <picture>
+                        <source media="(min-width:1280px)" srcset="img/phone-desktop.png"/>
+                        <img
+                            class="quality__img-phone"
+                            src="img/phone.png"
+                            width="171"
+                            height="342"
+                            alt="" 
+                        />
+                    </picture>
+                    <picture>
+                        <source media="(min-width:1280px)" srcset="img/phone-display-desktop.png"/>
+                        <img
+                            class="quality__img-phone quality__img-phone--display"
+                            src="img/phone-display.png"
+                            width="151"
+                            height="325"
+                            alt="iphone with open our app" 
+                        />
+                    </picture>
                 </div>
             </div>
         </section>
@@ -288,13 +316,16 @@
                 </h2>
                 <ul class="top-rests__list">
                     <li class="top-rests__item">
-                        <img
-                            class="top-rests__img"
-                            src="img/rest1.png"
-                            width="315"
-                            height="140"
-                            alt="Chicken"
-                        />
+                        <picture>
+                            <source media="(min-width:1024px)" srcset="img/rest1-desktop.png"/>
+                            <img
+                                class="top-rests__img"
+                                src="img/rest1.png"
+                                width="315"
+                                height="140"
+                                alt="Chicken"
+                            />
+                        </picture>
                         <div class="top-rests__info">
                             <span class="top-rests__stiker stiker">Healthy</span>
                             <a
@@ -321,13 +352,16 @@
                         </div>
                     </li>
                     <li class="top-rests__item">
-                        <img
-                            class="top-rests__img"
-                            src="img/rest2.png"
-                            width="315"
-                            height="140"
-                            alt="Hamburger"
-                        />
+                        <picture>
+                            <source media="(min-width:1024px)" srcset="img/rest2-desktop.png"/>
+                            <img
+                                class="top-rests__img"
+                                src="img/rest2.png"
+                                width="315"
+                                height="140"
+                                alt="Hamburger"
+                            />
+                        </picture>
                         <div class="top-rests__info">
                             <span class="top-rests__stiker stiker stiker--red">Trending</span>
                             <a
@@ -354,13 +388,16 @@
                         </div>
                     </li>
                     <li class="top-rests__item">
-                        <img
-                            class="top-rests__img"
-                            src="img/rest2.png"
-                            width="315"
-                            height="140"
-                            alt="Hamburger"
-                        />
+                        <picture>
+                            <source media="(min-width:1024px)" srcset="img/rest2-desktop.png"/>
+                            <img
+                                class="top-rests__img"
+                                src="img/rest2.png"
+                                width="315"
+                                height="140"
+                                alt="Hamburger"
+                            />
+                        </picture>
                         <div class="top-rests__info">
                             <span class="top-rests__stiker stiker stiker--red">Trending</span>
                             <a
@@ -388,7 +425,7 @@
                     </li>
                 </ul>
                 <a
-                    class="top-rests__full-link"
+                    class="top-rests__full-link full-link"
                     href="#"
                     target="_blank"
                 >
@@ -413,13 +450,16 @@
                                 <use xlink:href="sprite.svg#heart"></use>
                             </svg>
                         </button>
-                        <img
-                            class="top-dishes__img top-dishes__img--big"
-                            src="img/food-mobile-2.png"
-                            width="131"
-                            height="136"
-                            alt="Chicken with vegetables"
-                        />
+                        <picture>
+                            <source media="(min-width:1024px)" srcset="img/food-desktop-1.png"/>
+                            <img
+                                class="top-dishes__img top-dishes__img--big"
+                                src="img/food-mobile-2.png"
+                                width="131"
+                                height="136"
+                                alt="Chicken with vegetables"
+                            />
+                        </picture>
                         <div class="top-dishes__info">
                             <span class="top-dishes__stiker stiker">Healthy</span>
                             <a
@@ -457,13 +497,16 @@
                                 <use xlink:href="sprite.svg#heart"></use>
                             </svg>
                         </button>
-                        <img
-                            class="top-dishes__img"
-                            src="img/food-mobile-3.png"
-                            width="131"
-                            height="136"
-                            alt="Pig with vegetables"
-                        />
+                        <picture>
+                            <source media="(min-width:1024px)" srcset="img/food-desktop-3.png"/>
+                            <img
+                                class="top-dishes__img"
+                                src="img/food-mobile-3.png"
+                                width="131"
+                                height="136"
+                                alt="Pig with vegetables"
+                            />
+                        </picture>
                         <div class="top-dishes__info">
                             <span class="top-dishes__stiker stiker stiker--red">Trending</span>
                             <a
@@ -501,13 +544,16 @@
                                 <use xlink:href="sprite.svg#heart"></use>
                             </svg>
                         </button>
-                        <img
-                            class="top-dishes__img"
-                            src="img/food-mobile-4.png"
-                            width="131"
-                            height="136"
-                            alt="Fish with vegetables"
-                        />
+                        <picture>
+                            <source media="(min-width:1024px)" srcset="img/food-desktop-4.png"/>
+                            <img
+                                class="top-dishes__img"
+                                src="img/food-mobile-4.png"
+                                width="131"
+                                height="136"
+                                alt="Fish with vegetables"
+                            />
+                        </picture>
                         <div class="top-dishes__info">
                             <span class="top-dishes__stiker stiker stiker--green">Supreme</span>
                             <a 
@@ -545,13 +591,16 @@
                                 <use xlink:href="sprite.svg#heart"></use>
                             </svg>
                         </button>
-                        <img
-                            class="top-dishes__img top-dishes__img--big"
-                            src="img/food-mobile-2.png"
-                            width="131"
-                            height="136"
-                            alt="Chicken with vegetables"
-                        />
+                        <picture>
+                            <source media="(min-width:1024px)" srcset="img/food-desktop-1.png"/>
+                            <img
+                                class="top-dishes__img top-dishes__img--big"
+                                src="img/food-mobile-2.png"
+                                width="131"
+                                height="136"
+                                alt="Chicken with vegetables"
+                            />
+                        </picture>
                         <div class="top-dishes__info">
                             <span class="top-dishes__stiker stiker">Healthy</span>
                             <a
@@ -583,9 +632,56 @@
                             </button>
                         </div>
                     </li>
+                    <li class="top-dishes__item">
+                        <button class="top-dishes__btn-heart" aria-label="save dish">
+                            <svg width="14" height="12">
+                                <use xlink:href="sprite.svg#heart"></use>
+                            </svg>
+                        </button>
+                        <picture>
+                            <source media="(min-width:1024px)" srcset="img/food-desktop-3.png"/>
+                            <img
+                                class="top-dishes__img"
+                                src="img/food-mobile-3.png"
+                                width="131"
+                                height="136"
+                                alt="Pig with vegetables"
+                            />
+                        </picture>
+                        <div class="top-dishes__info">
+                            <span class="top-dishes__stiker stiker stiker--red">Trending</span>
+                            <a
+                                class="top-dishes__name"
+                                href="#"
+                                target="_blank"
+                            >
+                                Swe Dish
+                            </a>
+                            <span class="top-dishes__group-text">
+                                <span class="top-dishes__time">34min •</span>
+                                <span class="top-dishes__rating">
+                                    <svg width="14" height="14">
+                                        <use xlink:href="sprite.svg#star"></use>
+                                    </svg>
+                                    <span class="top-dishes__rating-value">4.9</span>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="top-dishes__buy">
+                            <span class="top-dishes__price">
+                                <span class="top-dishes__big-price text-bold">$19</span>
+                                <span class="top-dishes__small-price">.99</span>
+                            </span>
+                            <button class="top-dishes__btn-plus" aria-label="add dish">
+                                <svg width="10" height="10">
+                                    <use xlink:href="sprite.svg#plus"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
                 </ul>
                 <a
-                    class="top-dishes__full-link"
+                    class="top-dishes__full-link full-link"
                     href="#"
                     target="_blank"
                 >
@@ -598,73 +694,84 @@
         </section>
         <section class="control">
             <div class="control__wrapper container">
-                <h2 class="control__title text-title">
-                    <span class="text-bold">
-                        Control <span class="text-violet">Purchases</span> Via&nbsp;Dashboard
-                    </span>
-                </h2>
-                <ul class="control__list">
-                    <li class="control__item">
-                        <a
-                            class="control__link"
-                            href="#"
-                            target="_blank"
-                        >
-                            <img
-                                class="control__img"
-                                src="img/food-mobile-6.png"
-                                width="51"
-                                height="52"
-                                alt="Chicken with vegetables"
-                            />
-                            <span class="control__info">
-                                <span class="control__name">Chicken Hell</span>
-                                <span class="control__status">On The Way</span>
-                            </span>
-                            <span class="control__time">3:09 PM</span>
-                        </a>
-                    </li>
-                    <li class="control__item">
-                        <a
-                            class="control__link"
-                            href="#"
-                            target="_blank"
-                        >
-                            <img
-                                class="control__img"
-                                src="img/food-mobile-7.png"
-                                width="51"
-                                height="52"
-                                alt="Pig with vegetables"
-                            />
-                            <span class="control__info">
-                                <span class="control__name">Swe Dish</span>
-                                <span class="control__status">Delivered</span>
-                            </span>
-                            <span class="control__time">Yesterday</span>
-                        </a>
-                    </li>
-                    <li class="control__item">
-                        <a
-                            class="control__link"
-                            href="#"
-                            target="_blank"
-                        >
-                            <img
-                                class="control__img"
-                                src="img/food-mobile-9.png"
-                                width="51"
-                                height="52"
-                                alt="Fish with vegetables"
-                            />
-                            <span class="control__info">
-                                <span class="control__name">Fish Hell Veg</span>
-                                <span class="control__status control__status--cancel">Cancelled</span>
-                            </span>
-                            <span class="control__time">Yesterday</span>
-                        </a>
-                    </li>
-                </ul>
+                <div class="control__wrapper-info">
+                    <h2 class="control__title text-title">
+                        <span class="text-bold">
+                            Control <span class="text-violet">Purchases</span> Via&nbsp;Dashboard
+                        </span>
+                    </h2>
+                    <ul class="control__list">
+                        <li class="control__item">
+                            <a
+                                class="control__link"
+                                href="#"
+                                target="_blank"
+                            >
+                                <picture>
+                                    <source media="(min-width:1024px)" srcset="img/food-desktop-6.png"/>
+                                    <img
+                                        class="control__img"
+                                        src="img/food-mobile-6.png"
+                                        width="51"
+                                        height="52"
+                                        alt="Chicken with vegetables"
+                                    />
+                                </picture>
+                                <span class="control__info">
+                                    <span class="control__name">Chicken Hell</span>
+                                    <span class="control__status">On The Way</span>
+                                </span>
+                                <span class="control__time">3:09 PM</span>
+                            </a>
+                        </li>
+                        <li class="control__item">
+                            <a
+                                class="control__link"
+                                href="#"
+                                target="_blank"
+                            >
+                                <picture>
+                                    <source media="(min-width:1024px)" srcset="img/food-desktop-7.png"/>
+                                    <img
+                                        class="control__img"
+                                        src="img/food-mobile-7.png"
+                                        width="51"
+                                        height="52"
+                                        alt="Pig with vegetables"
+                                    />
+                                </picture>
+                                <span class="control__info">
+                                    <span class="control__name">Swe Dish</span>
+                                    <span class="control__status">Delivered</span>
+                                </span>
+                                <span class="control__time">Yesterday</span>
+                            </a>
+                        </li>
+                        <li class="control__item">
+                            <a
+                                class="control__link"
+                                href="#"
+                                target="_blank"
+                            >
+                                <picture>
+                                    <source media="(min-width:1024px)" srcset="img/food-desktop-9.png"/>
+                                    <img
+                                        class="control__img"
+                                        src="img/food-mobile-9.png"
+                                        width="51"
+                                        height="52"
+                                        alt="Fish with vegetables"
+                                    />
+                                </picture>
+                                <span class="control__info">
+                                    <span class="control__name">Fish Hell Veg</span>
+                                    <span class="control__status control__status--cancel">Cancelled</span>
+                                </span>
+                                <span class="control__time">Yesterday</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="purchases-group">
                     <header class="purchases-group__header">
                         <p class="purchases-group__title">Purchases</p>
@@ -727,7 +834,7 @@
             <div class="reviews__wrapper container">
                 <h2 class="reviews__title text-title">
                     <span class="text-bold">
-                        <span class="text-violet">Customer</span>Say
+                        <span class="text-violet">Customer</span> Say
                     </span>
                 </h2>
                 <div class="reviews__slider">
@@ -735,13 +842,16 @@
                         <li class="review">
                             <header class="review__header">
                                 <div class="review__user-data user">
-                                    <img
-                                        class="review__user-photo"
-                                        src="img/user.png"
-                                        width="42"
-                                        height="42"
-                                        alt="User photo"
-                                    />
+                                    <picture>
+                                        <source media="(min-width:1024px)" srcset="img/user-desktop.png"/>
+                                        <img
+                                            class="review__user-photo"
+                                            src="img/user.png"
+                                            width="42"
+                                            height="42"
+                                            alt="User photo"
+                                        />
+                                    </picture>
                                     <span class="review__user-info">
                                         <span class="review__user-name">Alexander R.</span>
                                         <span class="review__user-date">01 Year With Us</span>
@@ -819,7 +929,7 @@
                                         alt="User photo"
                                     />
                                     <span class="review__user-info">
-                                        <span class="review__user-name">Alexander R.</span>
+                                        <span class="review__user-name">William R.</span>
                                         <span class="review__user-date">01 Year With Us</span>
                                     </span>
                                 </div>
@@ -887,15 +997,18 @@
                         <li class="review">
                             <header class="review__header">
                                 <div class="review__user-data">
-                                    <img
-                                        class="review__user-photo"
-                                        src="img/user.png"
-                                        width="42"
-                                        height="42"
-                                        alt="User photo"
-                                    />
+                                    <picture>
+                                        <source media="(min-width:1024px)" srcset="img/user-desktop.png"/>
+                                        <img
+                                            class="review__user-photo"
+                                            src="img/user.png"
+                                            width="42"
+                                            height="42"
+                                            alt="User photo"
+                                        />
+                                    </picture>
                                     <span class="review__user-info">
-                                        <span class="review__user-name">Alexander R.</span>
+                                        <span class="review__user-name">Bill R.</span>
                                         <span class="review__user__date">01 Year With Us</span>
                                     </span>
                                 </div>
@@ -980,13 +1093,16 @@
                             <button class="subscribe__btn" type="submit">Subscribe</button>
                         </form>
                     </div>
-                    <img
-                        class="subscribe__img"
-                        src="img/food-mobile-10.png"
-                        width="169"
-                        height="170"
-                        alt="Chicken with vegetables"
-                    />
+                    <picture>
+                        <source media="(min-width:1024px)" srcset="img/food-desktop-10.png"/>
+                        <img
+                            class="subscribe__img"
+                            src="img/food-mobile-10.png"
+                            width="169"
+                            height="170"
+                            alt="Chicken with vegetables"
+                        />
+                    </picture>
                 </div>
             </div>
         </section>
@@ -995,7 +1111,7 @@
         <div class="page-footer__wrapper container">
             <div class="page-footer__top">
                 <a
-                    class="page-footer__logo"
+                    class="page-footer__logo page-footer__logo--mobile"
                     href="#"
                     target="_blank"
                 >
@@ -1010,76 +1126,99 @@
                         <use xlink:href="sprite.svg#logo"></use>
                     </svg>
                 </a>
-                <span class="page-footer__social-links">
-                    <a
-                        class="page-footer__social-link"
-                        href="#"
-                        target="_blank"
-                    >
-                        <svg width="16" height="16">
-                            <use xlink:href="sprite.svg#instagram"></use>
-                        </svg>
-                    </a>
-                    <a
-                        class="page-footer__social-link"
-                        href="#"
-                        target="_blank"
-                    >
-                        <svg width="16" height="15">
-                            <use xlink:href="sprite.svg#linkedin"></use>
-                        </svg>
-                    </a>
-                    <a
-                        class="page-footer__social-link"
-                        href="#"
-                        target="_blank"
-                    >
-                        <svg width="7" height="16">
-                            <use xlink:href="sprite.svg#facebook"></use>
-                        </svg>
-                    </a>
-                    <a
-                        class="page-footer__social-link"
-                        href="#"
-                        target="_blank"
-                    >
-                        <svg width="16" height="13">
-                            <use xlink:href="sprite.svg#twitter"></use>
-                        </svg>
-                    </a>
+                <span class="page-footer__wrapper--top">
+                    <span class="page-footer__copyright page-footer__copyright--tablet">
+                        © 2023 <span class="company-name">Eatly</span> All Rights Reserved.
+                    </span>
+                    <span class="page-footer__social-links">
+                        <a
+                            class="page-footer__social-link"
+                            href="#"
+                            target="_blank"
+                        >
+                            <svg width="16" height="16">
+                                <use xlink:href="sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                        <a
+                            class="page-footer__social-link"
+                            href="#"
+                            target="_blank"
+                        >
+                            <svg width="16" height="15">
+                                <use xlink:href="sprite.svg#linkedin"></use>
+                            </svg>
+                        </a>
+                        <a
+                            class="page-footer__social-link"
+                            href="#"
+                            target="_blank"
+                        >
+                            <svg width="7" height="16">
+                                <use xlink:href="sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                        <a
+                            class="page-footer__social-link"
+                            href="#"
+                            target="_blank"
+                        >
+                            <svg width="16" height="13">
+                                <use xlink:href="sprite.svg#twitter"></use>
+                            </svg>
+                        </a>
+                    </span>
                 </span>
             </div>
-            <ul class="page-footer__menu">
-                <li class="page-footer__menu-item">
-                    <a
-                        class="page-footer__menu-link"
-                        href="#"
-                        target="_blank"
-                    >Blog</a>
-                </li>
-                <li class="page-footer__menu-item">
-                    <a
-                        class="page-footer__menu-link"
-                        href="#"
-                        target="_blank"
-                    >Pricing</a>
-                </li>
-                <li class="page-footer__menu-item">
-                    <a
-                        class="page-footer__menu-link"
-                        href="#"
-                        target="_blank"
-                    >About Us</a>
-                </li>
-                <li class="page-footer__menu-item">
-                    <a
-                        class="page-footer__menu-link"
-                        href="#"
-                        target="_blank"
-                    >Contact</a>
-                </li>
-            </ul>
-            <div class="page-footer__copyright">
+            <div class="page-footer__wrapper--bottom">
+                <a
+                    class="page-footer__logo page-footer__logo--tablet"
+                    href="#"
+                    target="_blank"
+                >
+                    <span class="visually-hidden">
+                        Eatly Logotype
+                    </span>
+                    <svg
+                        class="page-footer__logo-icon"
+                        width="112"
+                        height="42"
+                    >
+                        <use xlink:href="sprite.svg#logo"></use>
+                    </svg>
+                </a>
+                <ul class="page-footer__menu">
+                    <li class="page-footer__menu-item">
+                        <a
+                            class="page-footer__menu-link"
+                            href="#"
+                            target="_blank"
+                        >Blog</a>
+                    </li>
+                    <li class="page-footer__menu-item">
+                        <a
+                            class="page-footer__menu-link"
+                            href="#"
+                            target="_blank"
+                        >Pricing</a>
+                    </li>
+                    <li class="page-footer__menu-item">
+                        <a
+                            class="page-footer__menu-link"
+                            href="#"
+                            target="_blank"
+                        >About Us</a>
+                    </li>
+                    <li class="page-footer__menu-item">
+                        <a
+                            class="page-footer__menu-link"
+                            href="#"
+                            target="_blank"
+                        >Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="page-footer__copyright page-footer__copyright--mobile">
                 © 2023 <span class="company-name">Eatly</span> All Rights Reserved.
             </div>
         </div>

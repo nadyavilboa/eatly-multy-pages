@@ -46,7 +46,9 @@ module.exports = {
             patterns: [
                 { from: 'src/assets/img', to: 'img' },
                 { from: 'src/index.html' },
-                { from: 'src/assets/sprite.svg' }
+                { from: 'src/assets/sprite.svg' },
+                { from: 'src/favicon.ico' },
+                { from: 'src/site.webmanifest' },
             ]
         }),
     ],

@@ -11,6 +11,10 @@
         rel="stylesheet"
     >
     <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body class="page-body">
     <header class="page-header">
@@ -182,13 +186,18 @@
                 </div>
                 <div class="banner__graphics graphics">
                     <div class="graphics__rest">
-                        <img
-                            class="graphics__rest-img"
-                            src="img/food-mobile-2.png"
-                            width="35"
-                            height="38"
-                            alt="dish vegetables and fish" 
-                        />
+                        <picture>
+                            <source media="(min-width:1280px)" srcset="img/food-desktop-2.png"/> 
+                            <source media="(min-width:1024px)" srcset="img/food-tablet-2.png"/>
+                            <img
+                                class="graphics__rest-img"
+                                src="img/food-mobile-2.png"
+                                width="35"
+                                height="38"
+                                alt="dish vegetables and fish"
+                                loading="lazy"
+                            />
+                        </picture>
                         <span class="graphics__rest-info">
                             <span class="graphics__rest-name">Chicken Hell</span>
                             <span class="graphics__rest-text">On The Way</span>
@@ -197,25 +206,29 @@
                     </div>
                     <div class="graphics__ring-img-wrapper">
                         <picture>
+                            <source media="(min-width:1280px)" srcset="img/food-desktop-1.png"/> 
                             <source media="(min-width:1024px)" srcset="img/food-tablet-1.png"/>
                             <img
                                 class="graphics__ring-img"
                                 src="img/food-mobile-1.png"
                                 width="204"
                                 height="210"
-                                alt="dish vegetables and fish" 
+                                alt="dish vegetables and fish"
+                                loading="lazy"
                             />
                         </picture>
                     </div>
                     <div class="graphics__graph">
                         <div class="graphics__graph-content">
                             <picture>
+                                <source media="(min-width:1280px)" srcset="img/graph-desktop.png"/>
                                 <source media="(min-width:1024px)" srcset="img/graph-tablet.png"/>
                                 <img
                                     src="img/graph-mobile.png"
                                     width="98"
                                     height="98"
                                     alt="graphic"
+                                    loading="lazy"
                                 />
                             </picture>
                         </div>
@@ -279,20 +292,30 @@
                     </button>
                 </div>
                 <div class="quality__img">
-                    <img
-                        class="quality__img-phone"
-                        src="img/phone.png"
-                        width="171"
-                        height="342"
-                        alt="" 
-                    />
-                    <img
-                        class="quality__img-phone quality__img-phone--display"
-                        src="img/phone-display.png"
-                        width="151"
-                        height="325"
-                        alt="iphone with open our app" 
-                    />
+                    <picture>
+                        <source media="(min-width:1280px)" srcset="img/phone-desktop.png"/>
+                        <source media="(min-width:1024px)" srcset="img/phone-tablet.png"/>
+                        <img
+                            class="quality__img-phone"
+                            src="img/phone.png"
+                            width="171"
+                            height="342"
+                            alt=""
+                            loading="lazy"
+                        />
+                    </picture>
+                    <picture>
+                        <source media="(min-width:1280px)" srcset="img/phone-display-desktop.png"/>
+                        <source media="(min-width:1024px)" srcset="img/phone-display-tablet.png"/>
+                        <img
+                            class="quality__img-phone quality__img-phone--display"
+                            src="img/phone-display.png"
+                            width="151"
+                            height="325"
+                            alt="phone with open our app"
+                            loading="lazy"
+                        />
+                    </picture>
                 </div>
             </div>
         </section>
@@ -305,13 +328,18 @@
                 </h2>
                 <ul class="top-rests__list">
                     <li class="top-rests__item">
-                        <img
-                            class="top-rests__img"
-                            src="img/rest1.png"
-                            width="315"
-                            height="140"
-                            alt="Chicken"
-                        />
+                        <picture>
+                            <source media="(min-width:1280px)" srcset="img/rest1-desktop.png"/>
+                            <source media="(min-width:1024px)" srcset="img/rest1-tablet.png"/>
+                            <img
+                                class="top-rests__img"
+                                src="img/rest1.png"
+                                width="315"
+                                height="140"
+                                alt="Chicken"
+                                loading="lazy"
+                            />
+                        </picture>
                         <div class="top-rests__info">
                             <span class="top-rests__stiker stiker">Healthy</span>
                             <a
@@ -331,20 +359,25 @@
                                 </span>
                             </span>
                             <button class="top-rests__btn-mark" aria-label="save rest">
-                                <svg width="12" height="16">
+                                <svg width="12" height="16" fill="currentColor">
                                     <use xlink:href="sprite.svg#save"></use>
                                 </svg>
                             </button>
                         </div>
                     </li>
                     <li class="top-rests__item">
-                        <img
-                            class="top-rests__img"
-                            src="img/rest2.png"
-                            width="315"
-                            height="140"
-                            alt="Hamburger"
-                        />
+                        <picture>
+                            <source media="(min-width:1280px)" srcset="img/rest2-desktop.png"/>
+                            <source media="(min-width:1024px)" srcset="img/rest2-tablet.png"/>
+                            <img
+                                class="top-rests__img"
+                                src="img/rest2.png"
+                                width="315"
+                                height="140"
+                                alt="Hamburger"
+                                loading="lazy"
+                            />
+                        </picture>
                         <div class="top-rests__info">
                             <span class="top-rests__stiker stiker stiker--red">Trending</span>
                             <a
@@ -371,13 +404,18 @@
                         </div>
                     </li>
                     <li class="top-rests__item">
-                        <img
-                            class="top-rests__img"
-                            src="img/rest2.png"
-                            width="315"
-                            height="140"
-                            alt="Hamburger"
-                        />
+                        <picture>
+                            <source media="(min-width:1280px)" srcset="img/rest2-desktop.png"/>
+                            <source media="(min-width:1024px)" srcset="img/rest2-tablet.png"/>
+                            <img
+                                class="top-rests__img"
+                                src="img/rest2.png"
+                                width="315"
+                                height="140"
+                                alt="Hamburger"
+                                loading="lazy"
+                            />
+                        </picture>
                         <div class="top-rests__info">
                             <span class="top-rests__stiker stiker stiker--red">Trending</span>
                             <a
@@ -430,13 +468,18 @@
                                 <use xlink:href="sprite.svg#heart"></use>
                             </svg>
                         </button>
-                        <img
-                            class="top-dishes__img top-dishes__img--big"
-                            src="img/food-mobile-2.png"
-                            width="131"
-                            height="136"
-                            alt="Chicken with vegetables"
-                        />
+                        <picture>
+                            <source media="(min-width:1280px)" srcset="img/food-desktop-1.png"/>
+                            <source media="(min-width:1024px)" srcset="img/food-tablet-1.png"/>
+                            <img
+                                class="top-dishes__img top-dishes__img--big"
+                                src="img/food-mobile-2.png"
+                                width="131"
+                                height="136"
+                                alt="Chicken with vegetables"
+                                loading="lazy"
+                            />
+                        </picture>
                         <div class="top-dishes__info">
                             <span class="top-dishes__stiker stiker">Healthy</span>
                             <a
@@ -474,13 +517,18 @@
                                 <use xlink:href="sprite.svg#heart"></use>
                             </svg>
                         </button>
-                        <img
-                            class="top-dishes__img"
-                            src="img/food-mobile-3.png"
-                            width="131"
-                            height="136"
-                            alt="Pig with vegetables"
-                        />
+                        <picture>
+                            <source media="(min-width:1280px)" srcset="img/food-desktop-3.png"/>
+                            <source media="(min-width:1024px)" srcset="img/food-tablet-3.png"/>
+                            <img
+                                class="top-dishes__img"
+                                src="img/food-mobile-3.png"
+                                width="131"
+                                height="136"
+                                alt="Pig with vegetables"
+                                loading="lazy"
+                            />
+                        </picture>
                         <div class="top-dishes__info">
                             <span class="top-dishes__stiker stiker stiker--red">Trending</span>
                             <a
@@ -518,13 +566,18 @@
                                 <use xlink:href="sprite.svg#heart"></use>
                             </svg>
                         </button>
-                        <img
-                            class="top-dishes__img"
-                            src="img/food-mobile-4.png"
-                            width="131"
-                            height="136"
-                            alt="Fish with vegetables"
-                        />
+                        <picture>
+                            <source media="(min-width:1280px)" srcset="img/food-desktop-4.png"/>
+                            <source media="(min-width:1024px)" srcset="img/food-tablet-4.png"/>
+                            <img
+                                class="top-dishes__img"
+                                src="img/food-mobile-4.png"
+                                width="131"
+                                height="136"
+                                alt="Fish with vegetables"
+                                loading="lazy"
+                            />
+                        </picture>
                         <div class="top-dishes__info">
                             <span class="top-dishes__stiker stiker stiker--green">Supreme</span>
                             <a 
@@ -562,13 +615,18 @@
                                 <use xlink:href="sprite.svg#heart"></use>
                             </svg>
                         </button>
-                        <img
-                            class="top-dishes__img top-dishes__img--big"
-                            src="img/food-mobile-2.png"
-                            width="131"
-                            height="136"
-                            alt="Chicken with vegetables"
-                        />
+                        <picture>
+                            <source media="(min-width:1280px)" srcset="img/food-desktop-1.png"/>
+                            <source media="(min-width:1024px)" srcset="img/food-tablet-1.png"/>
+                            <img
+                                class="top-dishes__img top-dishes__img--big"
+                                src="img/food-mobile-2.png"
+                                width="131"
+                                height="136"
+                                alt="Chicken with vegetables"
+                                loading="lazy"
+                            />
+                        </picture>
                         <div class="top-dishes__info">
                             <span class="top-dishes__stiker stiker">Healthy</span>
                             <a
@@ -606,13 +664,18 @@
                                 <use xlink:href="sprite.svg#heart"></use>
                             </svg>
                         </button>
-                        <img
-                            class="top-dishes__img"
-                            src="img/food-mobile-3.png"
-                            width="131"
-                            height="136"
-                            alt="Pig with vegetables"
-                        />
+                        <picture>
+                            <source media="(min-width:1280px)" srcset="img/food-desktop-3.png"/>
+                            <source media="(min-width:1024px)" srcset="img/food-tablet-3.png"/>
+                            <img
+                                class="top-dishes__img"
+                                src="img/food-mobile-3.png"
+                                width="131"
+                                height="136"
+                                alt="Pig with vegetables"
+                                loading="lazy"
+                            />
+                        </picture>
                         <div class="top-dishes__info">
                             <span class="top-dishes__stiker stiker stiker--red">Trending</span>
                             <a
@@ -672,13 +735,18 @@
                                 href="#"
                                 target="_blank"
                             >
-                                <img
-                                    class="control__img"
-                                    src="img/food-mobile-6.png"
-                                    width="51"
-                                    height="52"
-                                    alt="Chicken with vegetables"
-                                />
+                                <picture>
+                                    <source media="(min-width:1280px)" srcset="img/food-desktop-6.png"/>
+                                    <source media="(min-width:1024px)" srcset="img/food-tablet-6.png"/>
+                                    <img
+                                        class="control__img"
+                                        src="img/food-mobile-6.png"
+                                        width="51"
+                                        height="52"
+                                        alt="Chicken with vegetables"
+                                        loading="lazy"
+                                    />
+                                </picture>
                                 <span class="control__info">
                                     <span class="control__name">Chicken Hell</span>
                                     <span class="control__status">On The Way</span>
@@ -692,13 +760,18 @@
                                 href="#"
                                 target="_blank"
                             >
-                                <img
-                                    class="control__img"
-                                    src="img/food-mobile-7.png"
-                                    width="51"
-                                    height="52"
-                                    alt="Pig with vegetables"
-                                />
+                                <picture>
+                                    <source media="(min-width:1280px)" srcset="img/food-desktop-7.png"/>
+                                    <source media="(min-width:1024px)" srcset="img/food-tablet-7.png"/>
+                                    <img
+                                        class="control__img"
+                                        src="img/food-mobile-7.png"
+                                        width="51"
+                                        height="52"
+                                        alt="Pig with vegetables"
+                                        loading="lazy"
+                                    />
+                                </picture>
                                 <span class="control__info">
                                     <span class="control__name">Swe Dish</span>
                                     <span class="control__status">Delivered</span>
@@ -712,13 +785,18 @@
                                 href="#"
                                 target="_blank"
                             >
-                                <img
-                                    class="control__img"
-                                    src="img/food-mobile-9.png"
-                                    width="51"
-                                    height="52"
-                                    alt="Fish with vegetables"
-                                />
+                                <picture>
+                                    <source media="(min-width:1280px)" srcset="img/food-desktop-9.png"/>
+                                    <source media="(min-width:1024px)" srcset="img/food-tablet-9.png"/>
+                                    <img
+                                        class="control__img"
+                                        src="img/food-mobile-9.png"
+                                        width="51"
+                                        height="52"
+                                        alt="Fish with vegetables"
+                                        loading="lazy"
+                                    />
+                                </picture>
                                 <span class="control__info">
                                     <span class="control__name">Fish Hell Veg</span>
                                     <span class="control__status control__status--cancel">Cancelled</span>
@@ -798,13 +876,18 @@
                         <li class="review">
                             <header class="review__header">
                                 <div class="review__user-data user">
-                                    <img
-                                        class="review__user-photo"
-                                        src="img/user.png"
-                                        width="42"
-                                        height="42"
-                                        alt="User photo"
-                                    />
+                                    <picture>
+                                        <source media="(min-width:1280px)" srcset="img/user-desktop.png"/>
+                                        <source media="(min-width:1024px)" srcset="img/user-tablet.png"/>
+                                        <img
+                                            class="review__user-photo"
+                                            src="img/user.png"
+                                            width="42"
+                                            height="42"
+                                            alt="User photo"
+                                            loading="lazy"
+                                        />
+                                    </picture>
                                     <span class="review__user-info">
                                         <span class="review__user-name">Alexander R.</span>
                                         <span class="review__user-date">01 Year With Us</span>
@@ -874,13 +957,18 @@
                         <li class="review">
                             <header class="review__header">
                                 <div class="review__user-data user">
-                                    <img
-                                        class="review__user-photo"
-                                        src="img/user.png"
-                                        width="42"
-                                        height="42"
-                                        alt="User photo"
-                                    />
+                                    <picture>
+                                        <source media="(min-width:1280px)" srcset="img/user-desktop.png"/>
+                                        <source media="(min-width:1024px)" srcset="img/user-tablet.png"/>
+                                        <img
+                                            class="review__user-photo"
+                                            src="img/user.png"
+                                            width="42"
+                                            height="42"
+                                            alt="User photo"
+                                            loading="lazy"
+                                        />
+                                    </picture>
                                     <span class="review__user-info">
                                         <span class="review__user-name">William R.</span>
                                         <span class="review__user-date">01 Year With Us</span>
@@ -950,13 +1038,18 @@
                         <li class="review">
                             <header class="review__header">
                                 <div class="review__user-data">
-                                    <img
-                                        class="review__user-photo"
-                                        src="img/user.png"
-                                        width="42"
-                                        height="42"
-                                        alt="User photo"
-                                    />
+                                    <picture>
+                                        <source media="(min-width:1280px)" srcset="img/user-desktop.png"/>
+                                        <source media="(min-width:1024px)" srcset="img/user-tablet.png"/>
+                                        <img
+                                            class="review__user-photo"
+                                            src="img/user.png"
+                                            width="42"
+                                            height="42"
+                                            alt="User photo"
+                                            loading="lazy"
+                                        />
+                                    </picture>
                                     <span class="review__user-info">
                                         <span class="review__user-name">Bill R.</span>
                                         <span class="review__user__date">01 Year With Us</span>
@@ -1040,16 +1133,21 @@
                                 value=""
                                 placeholder="Email Adress"
                             />
-                            <button class="subscribe__btn" type="submit">Subscribe</button>
+                            <button class="subscribe__btn btn btn-violet" type="submit">Subscribe</button>
                         </form>
                     </div>
-                    <img
-                        class="subscribe__img"
-                        src="img/food-mobile-10.png"
-                        width="169"
-                        height="170"
-                        alt="Chicken with vegetables"
-                    />
+                    <picture>
+                        <source media="(min-width:1280px)" srcset="img/food-desktop-10.png"/>
+                        <source media="(min-width:1024px)" srcset="img/food-tablet-10.png"/>
+                        <img
+                            class="subscribe__img"
+                            src="img/food-mobile-10.png"
+                            width="169"
+                            height="170"
+                            alt="Chicken with vegetables"
+                            loading="lazy"
+                        />
+                    </picture>
                 </div>
             </div>
         </section>

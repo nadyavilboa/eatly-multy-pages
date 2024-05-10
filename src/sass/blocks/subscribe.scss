@@ -57,6 +57,12 @@
         max-width: 100px;
         border: none;
 
+        &:focus,
+        &:focus-visible {
+            outline: none;
+            border: none;
+        }
+
         @media (min-width: $big-tablet) {
             min-width: 200px;
             max-width: 250px;

@@ -108,15 +108,29 @@
         border: none;
         border-radius: 50%;
         background: $mark-save;
+        color: $violet-btn;
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: all 0.3s ease-in;
+        cursor: pointer;
 
         & svg {
+            color: $violet-btn;
+
             @media (min-width: $desktop) {
                 width: 14px;
                 height: 20px;
             }
+        }
+
+        &:hover {
+            color: $white;
+            background: $violet-btn;
+        }
+
+        &:hover svg use {
+            color: $white;
         }
 
         @media (min-width: $big-tablet) {

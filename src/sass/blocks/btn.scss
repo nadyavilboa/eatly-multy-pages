@@ -9,18 +9,36 @@
     font-size: 13.027px;
     font-weight: 500;
     letter-spacing: 0.13px;
+    cursor: pointer;
 
     &-border {
         border: 1px solid $violet-btn;
         color: $violet-btn;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+            background: $violet-btn;
+            color: $white;
+        }
     }
 
     &-violet {
         background: $violet-btn;
         color: $white;
+        transition: all 0.3s ease-in;
 
         svg {
             fill: $white;
+            transition: all 0.3s ease-in;
+        }
+
+        &:hover {
+            background: $progress-bar-orange-val;
+            color: $black;
+        }
+
+        &:hover svg {
+            fill: $black;
         }
     }
 
