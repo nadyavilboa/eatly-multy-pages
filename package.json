@@ -27,6 +27,13 @@
   },
   "devDependencies": {
     "copy-webpack-plugin": "11.0.0",
+    "image-minimizer-webpack-plugin": "^4.0.0",
+    "imagemin": "^9.0.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^11.0.0",
+    "imagemin-webp-webpack-plugin": "^3.3.6",
     "mini-css-extract-plugin": "^2.7.6",
     "webpack-dev-server": "^4.15.1"
   }

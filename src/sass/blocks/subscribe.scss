@@ -131,13 +131,29 @@
     }
 
     @media (min-width: $big-tablet) {
-        background: url(../assets/img/get-price-tablet.png) repeat-x $violet-btn;
+        background-image: url(../assets/img/get-price-tablet.png);
+        background-image: image-set(
+            url(../assets/img/get-price-tablet.webp) 1x,
+            url(../assets/img/get-price-tablet-@2x.webp) 2x,
+            url(../assets/img/get-price-tablet.png) 1x,
+            url(../assets/img/get-price-tablet-@2x.png) 2x,
+        );
+        background-repeat: repeat-x;
+        background-color: $violet-btn;
         border-radius: 21px;
         padding: 26px 46px 43px;
     }
 
     @media (min-width: $desktop) {
-        background: url(../assets/img/get-price-desktop.png) repeat $violet-btn;
+        background-image: url(../assets/img/get-price-desktop.png);
+        background-image: image-set(
+            url(../assets/img/get-price-desktop.webp) 1x,
+            url(../assets/img/get-price-desktop-@2x.webp) 2x,
+            url(../assets/img/get-price-desktop.png) 1x,
+            url(../assets/img/get-price-desktop-@2x.png) 2x,
+        );
+        background-repeat: repeat-x;
+        background-color: $violet-btn;
         width: calc(100% - 36px);
         padding: 37px 66px 60px;
         border-radius: 30px;

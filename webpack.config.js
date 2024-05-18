@@ -30,7 +30,7 @@ module.exports = {
                 'css-loader', 'sass-loader']
             },
             {
-                test: /\.png|svg|jpg|jpeg$/,
+                test: /\.png|svg|jpg|jpeg|webp$/,
                 type: 'asset/resource',
                 generator: {
                     filename: 'img/[name][ext]'
